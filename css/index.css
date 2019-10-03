@@ -164,7 +164,7 @@ nav a.active {
 	flex-flow: row wrap;
 }
 
-#Features, #About {
+.top div {
 	width: 49%;
 	margin-bottom: 2em;
 }
@@ -172,6 +172,10 @@ nav a.active {
 .middle {
 	width: 100%;
 	margin-bottom: 3em;
+}
+
+.middle img {
+	max-width: 100%;
 }
 
 .lower {
@@ -182,7 +186,7 @@ nav a.active {
 	flex-flow: row wrap;
 }
 
-#Services, #Product, #Vision {
+.lower div {
 	width: 33%;
 	padding-right: 0.5em;
 	margin-top: 0.5em;
@@ -239,4 +243,102 @@ footer p {
 
 .services-info-img {
 	max-width: 100%;
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 800px) {
+	body {
+		width: 97%;
+	}
+	.page-top {
+		flex-flow: column-reverse nowrap;
+		align-items: center;
+	}
+
+	.logo-div {
+		margin: 2em 0;
+	}
+
+	nav {
+		flex-wrap: nowrap;
+		width: 100%;
+		justify-content: space-between;
+	}
+
+	nav a {
+		padding: 0;
+	}
+
+	.hero {
+		justify-content: center;
+	}
+
+	.header-img {
+		display: none;
+	}
+}
+
+/* Mobile Phone Styles */
+@media screen and (max-width: 500px) {
+	body {
+		width: 100%;
+	}
+
+	.logo-div {
+		margin: 1em 0;
+	}
+
+	nav {
+		flex-direction: column;
+	}
+	nav a {
+		width: 100%;
+		text-align: center;
+		border-top: 1px solid black;
+		padding: 1em 0;
+	}
+
+	nav a:last-child {
+		border-bottom: 1px solid black;
+	}
+
+	nav a:hover {
+		animation-name: pulse;
+	}
+
+	.headline h1 {
+		font-size: 4em;
+	}
+
+	.headline h4 {
+		padding: 0.5em 1em;
+	}
+
+	main {
+		width: 95%;
+		margin: 0 auto;
+	}
+
+	.top, .lower {
+		flex-direction: column;
+	}
+
+	.top div, .lower div {
+		width: 100%;
+		margin-bottom: 2em;
+	}
+
+	.lower {
+		padding-bottom: 0;
+	}
+
+	footer {
+		width: 95%;
+		margin: 0 auto;
+	}
+
+	footer p {
+		margin-top: 1.5em;
+	}
+
 }
