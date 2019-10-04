@@ -211,10 +211,7 @@ footer p {
 }
 
 @media only screen and (min-width: 800px) {
-	/* TODO: Add tablet styles */
-	body {
-		background-color: coral;
-	}
+	/* Tablet styles */
 	
 	nav {
 		flex-flow: row nowrap;
@@ -253,11 +250,39 @@ footer p {
 }
 
 @media only screen and (min-width: 1000px) {
-	/* TODO: Add desktop styles */
+	/* Desktop styles */
 	body {
-		background-color: pink; 
+		width: 90%;
+		margin: 0 auto; 
 	}
+
+	.page-top {
+		flex-flow: row nowrap;
+	}
+
 	.header-img {
 		display: inline-block;
 	}
+
+	.headline {
+		padding: 2rem 0 2rem 6rem;
+		font-size: 1.25rem;
+	}
+	.hero {
+		display:flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.middle {
+		background: black;
+		background-image: url("../img/mid-page-accent.jpg");
+		background-size: cover;
+	}
+
+	.middle img {
+		visibility: hidden;
+	}
+
 }
