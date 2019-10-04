@@ -101,6 +101,7 @@ nav {
 	flex-direction: column;
 	width: 100%;
 }
+
 nav a {
 	width: 100%;
 	text-align: center;
@@ -127,6 +128,16 @@ nav a:hover {
 
 .headline h1 {
 	font-size: 4em;
+}
+
+.headline a {
+	color: black;
+	text-decoration: none;
+}
+
+.headline a h4:hover {
+	animation-name: pulse;
+	animation-duration: 3s;
 }
 
 .headline h4 {
@@ -199,19 +210,54 @@ footer p {
 	padding-top: 1.5em;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 800px) {
 	/* TODO: Add tablet styles */
 	body {
 		background-color: coral;
 	}
-	.header-img {
-		display: inline-block;
+	
+	nav {
+		flex-flow: row nowrap;
+	}
+	nav a {
+		border: none;
+	}
+
+	nav a:last-child {
+		border-bottom: none;
+	}
+
+	.top {
+		display: flex;
+		flex-flow: row nowrap;
+	}
+
+	.lower {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		border-bottom: 1px solid black;
+	}
+
+	.lower div {
+		width: 32%;
+	}
+
+	section:last-child div:last-child {
+		border-bottom: none;
+	}
+
+	footer {
+		padding-top: 2rem;
 	}
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1000px) {
 	/* TODO: Add desktop styles */
 	body {
 		background-color: pink; 
+	}
+	.header-img {
+		display: inline-block;
 	}
 }
