@@ -1,0 +1,217 @@
+/* Mobile First Approach */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* My Styles */
+
+/* wobble is from https://www.tutorialspoint.com/css/css_animation_wobble.htm */
+@keyframes wobble {
+   0% { transform: translateX(0%); }
+   15% { transform: translateX(-25%) rotate(-5deg); }
+   30% { transform: translateX(20%) rotate(3deg); }
+   45% { transform: translateX(-15%) rotate(-3deg); }
+   60% { transform: translateX(10%) rotate(2deg); }
+   75% { transform: translateX(-5%) rotate(-1deg); }
+   100% { transform: translateX(0%); }
+}
+
+/* Pulse is from https://www.tutorialspoint.com/css/css_animation_pulse.htm*/
+@keyframes pulse {
+   0% { transform: scale(1); }
+   50% { transform: scale(1.1); }
+   100% { transform: scale(1); }
+}
+
+.page-top {
+	display: flex;
+	flex-flow: column-reverse nowrap;
+	align-items: center;
+
+}
+
+.logo-div {
+	margin: 1em 0;
+}
+
+nav {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+nav a {
+	width: 100%;
+	text-align: center;
+	border-top: 1px solid black;
+	padding: 1em 0;
+	color: gray;
+	text-decoration: none;
+}
+
+nav a:last-child {
+	border-bottom: 1px solid black;
+}
+
+nav a:hover {
+	animation-name: pulse;
+	animation-duration: 3s;
+
+}
+
+.headline {
+	text-align: center;
+	margin: 2em;
+}
+
+.headline h1 {
+	font-size: 4em;
+}
+
+.headline h4 {
+	padding: 0.5em;
+	border: 1px solid black;
+	width: 50%;
+	margin: 0 auto;
+	font-family: 'Titillium Web', sans-serif;
+}
+
+.hero {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	border-bottom: 1px solid black;
+	width: 95%;
+	margin: 0 auto;
+	padding-bottom: 2em;
+}
+
+.header-img {
+	display: none;
+}
+
+main {
+	width: 95%;
+	margin: 0 auto;
+}
+
+section div {
+	margin: 2em 0;
+}
+
+.middle-img {
+	max-width: 100%;
+}
+
+section:last-child div:last-child {
+	border-bottom: 1px solid black;
+	padding-bottom: 2em;
+}
+
+footer {
+	width: 95%;
+	margin: 0 auto;
+}
+
+.address {	
+	line-height: 1.25em;
+	margin-top: 1em;
+}
+
+.address a {
+	text-decoration: none;
+	color: black;
+}
+
+.address:hover {
+	font-family: 'Turret Road', sans-serif;
+	color: rgb(11, 127, 148);
+	cursor: pointer;
+}
+
+.address a:hover {
+	color: rgb(11, 127, 148);
+}
+
+footer p {
+	text-align: center;
+	padding-top: 1.5em;
+}
+
+@media only screen and (min-width: 700px) {
+	/* TODO: Add tablet styles */
+	body {
+		background-color: coral;
+	}
+	.header-img {
+		display: inline-block;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	/* TODO: Add desktop styles */
+	body {
+		background-color: pink; 
+	}
+}
