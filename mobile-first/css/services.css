@@ -1,0 +1,130 @@
+/* Styles for Services Page */
+/* Mobile-First Approach */
+
+body {
+    margin: 0 0.5em;
+}
+.button {
+    width: 50%;
+    margin: 0 auto;
+}
+
+main section .button h4 {
+    width: 100%;
+    font-size: 1.5em;
+}
+
+main section, .facts-text, .facts-img {
+    width: 100%;
+}
+nav {
+    margin-bottom: 1em;
+}
+
+@media (min-width: 800px) {
+	/* For tablets */
+	
+
+	.services-header-img-container {
+		max-width: 100%;
+	}
+
+	.facts {
+		flex-flow: column nowrap;
+	}
+
+	.facts-text img {
+		margin: 0 25%;
+		max-width: 50%;
+		
+	}
+}
+
+@media (min-width: 1000px) {
+    /* Desktop Styles */
+    .intro {
+        margin: 1em 0;
+        padding: 2em 0;
+        border-bottom: 1px solid black;
+        line-height: 1.25em;
+    }
+
+    .intro h1 {
+        font-size: 1.75em;
+    }
+
+    main {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin-top: 2em;
+        
+    }
+
+    main section {
+        width: 48%;
+        border: 1px solid black;
+        margin-bottom: 2em;
+        padding: 1em;
+        background: rgb(236, 231, 231);
+        
+    }
+
+    main section p {
+        margin-bottom: 1em;
+        line-height: 1.25em;
+    }
+
+    main section .button h4 {
+        margin: 0;
+        padding: 0.5em;
+        border: 1px solid black;
+        width: 50%;
+        font-family: 'Titillium Web', sans-serif;
+        border-radius: 3px;
+        background: white;
+        text-align: center;
+    }
+
+    .button h4:hover {
+        animation-name: pulse;
+        animation-duration: 4s;
+        cursor: pointer;
+    }
+
+    .facts {
+        border-top: 1px solid black;
+        margin: 2em 0 4em 0;
+        padding-top: 2em;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    .facts-text {
+        width: 48%;
+    }
+
+    .facts-text h2 {
+        padding-bottom: 0.5em;
+    }
+
+    .facts-text p {
+        padding-bottom: 1em;
+        line-height: 1.25em;
+    }
+
+    .facts-text ul {
+        list-style-type: square;
+        list-style-position: inside;
+        line-height: 2em;
+
+    }
+
+
+    .services-info-img {
+        max-width: 100%;
+    }
+}
+
+
