@@ -2,32 +2,62 @@
 /* Mobile-First Approach */
 
 body {
-    margin: 0 0.5em;
-}
-.button {
-    width: 50%;
+    width: 97%;
     margin: 0 auto;
 }
 
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    margin-top: 2em;
+    
+}
+
+.button {
+    width: 40%;
+    margin: 1em auto;
+    text-align: center;
+    padding: 1em 0.5em 0.5em 0.5em;
+    border: 1px solid black;
+    
+    
+}
+
 main section .button h4 {
-    width: 100%;
     font-size: 1.5em;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 main section, .facts-text, .facts-img {
     width: 100%;
+    padding-top: 2em;
 }
 nav {
     margin-bottom: 1em;
 }
 
+.intro {
+    margin: 1em 0.5em;
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+}
+
+
+.services-header-img-container {
+    width: 100%;
+    background-image: url("../img/services-header.jpg");
+    background-size: cover;
+    
+}
+
+.services-header-img-container img {
+    width: 100%;
+}
+
 @media (min-width: 800px) {
 	/* For tablets */
-	
 
-	.services-header-img-container {
-		max-width: 100%;
-	}
 
 	.facts {
 		flex-flow: column nowrap;
@@ -75,15 +105,8 @@ nav {
         line-height: 1.25em;
     }
 
-    main section .button h4 {
-        margin: 0;
-        padding: 0.5em;
-        border: 1px solid black;
-        width: 50%;
-        font-family: 'Titillium Web', sans-serif;
-        border-radius: 3px;
+    .button {
         background: white;
-        text-align: center;
     }
 
     .button h4:hover {
