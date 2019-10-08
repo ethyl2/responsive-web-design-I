@@ -1,0 +1,153 @@
+/* Styles for Services Page */
+/* Mobile-First Approach */
+
+body {
+    width: 97%;
+    margin: 0 auto;
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    margin-top: 2em;
+    
+}
+
+.button {
+    width: 40%;
+    margin: 1em auto;
+    text-align: center;
+    padding: 1em 0.5em 0.5em 0.5em;
+    border: 1px solid black;
+    
+    
+}
+
+main section .button h4 {
+    font-size: 1.5em;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+main section, .facts-text, .facts-img {
+    width: 100%;
+    padding-top: 2em;
+}
+nav {
+    margin-bottom: 1em;
+}
+
+.intro {
+    margin: 1em 0.5em;
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+}
+
+
+.services-header-img-container {
+    width: 100%;
+    background-image: url("../img/services-header.jpg");
+    background-size: cover;
+    
+}
+
+.services-header-img-container img {
+    width: 100%;
+}
+
+@media (min-width: 800px) {
+	/* For tablets */
+
+
+	.facts {
+		flex-flow: column nowrap;
+	}
+
+	.facts-text img {
+		margin: 0 25%;
+		max-width: 50%;
+		
+	}
+}
+
+@media (min-width: 1000px) {
+    /* Desktop Styles */
+    .intro {
+        margin: 1em 0;
+        padding: 2em 0;
+        border-bottom: 1px solid black;
+        line-height: 1.25em;
+    }
+
+    .intro h1 {
+        font-size: 1.75em;
+    }
+
+    main {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin-top: 2em;
+        
+    }
+
+    main section {
+        width: 48%;
+        border: 1px solid black;
+        margin-bottom: 2em;
+        padding: 1em;
+        background: rgb(236, 231, 231);
+        
+    }
+
+    main section p {
+        margin-bottom: 1em;
+        line-height: 1.25em;
+    }
+
+    .button {
+        background: white;
+    }
+
+    .button h4:hover {
+        animation-name: pulse;
+        animation-duration: 4s;
+        cursor: pointer;
+    }
+
+    .facts {
+        border-top: 1px solid black;
+        margin: 2em 0 4em 0;
+        padding-top: 2em;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    .facts-text {
+        width: 48%;
+    }
+
+    .facts-text h2 {
+        padding-bottom: 0.5em;
+    }
+
+    .facts-text p {
+        padding-bottom: 1em;
+        line-height: 1.25em;
+    }
+
+    .facts-text ul {
+        list-style-type: square;
+        list-style-position: inside;
+        line-height: 2em;
+
+    }
+
+
+    .services-info-img {
+        max-width: 100%;
+    }
+}
+
+

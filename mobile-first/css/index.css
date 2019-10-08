@@ -1,3 +1,5 @@
+/* Mobile First Approach */
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -64,16 +66,6 @@ h1, h2, h3, h4, h5 {
 }
 
 /* My Styles */
-body {
-	width: 95%;
-	margin: 0 auto;
-}
-
-.page-top {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-between;
-}
 
 /* wobble is from https://www.tutorialspoint.com/css/css_animation_wobble.htm */
 @keyframes wobble {
@@ -86,50 +78,67 @@ body {
    100% { transform: translateX(0%); }
 }
 
-nav {
+/* Pulse is from https://www.tutorialspoint.com/css/css_animation_pulse.htm*/
+@keyframes pulse {
+   0% { transform: scale(1); }
+   50% { transform: scale(1.1); }
+   100% { transform: scale(1); }
+}
+
+.page-top {
 	display: flex;
-	flex-flow: row wrap;
-	justify-content: flex-start;
+	flex-flow: column-reverse nowrap;
 	align-items: center;
-}
 
-nav a {
-	color: gray;
-	padding-right: 2em;
-	text-decoration: none;
-}
-
-nav a:hover {
-	animation-name: wobble;
-	animation-duration: 3s;
-}
-
-nav a.active {
-	font-weight: bold;
 }
 
 .logo-div {
-	margin: 1em 0 1em 9em;
+	margin: 1em 0;
 }
 
-.hero {
-	margin: 2em;
+nav {
 	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
+	flex-direction: column;
+	width: 100%;
+}
+
+nav a {
+	width: 100%;
+	text-align: center;
+	border-top: 1px solid black;
+	padding: 1em 0;
+	color: gray;
+	text-decoration: none;
+}
+
+nav a:last-child {
+	border-bottom: 1px solid black;
+}
+
+nav a:hover {
+	animation-name: pulse;
+	animation-duration: 3s;
+
 }
 
 .headline {
 	text-align: center;
 	margin: 2em;
-	display: flex;
-	flex-flow: column nowrap;
 }
 
 .headline h1 {
-	font-size: 5.5em;
+	font-size: 4em;
 }
 
+.headline a {
+	color: black;
+	text-decoration: none;
+}
+
+.headline a h4:hover {
+	animation-name: pulse;
+	animation-duration: 3s;
+}
 
 .headline h4 {
 	padding: 0.5em;
@@ -139,57 +148,41 @@ nav a.active {
 	font-family: 'Titillium Web', sans-serif;
 }
 
-/* Pulse is from https://www.tutorialspoint.com/css/css_animation_pulse.htm*/
-@keyframes pulse {
-   0% { transform: scale(1); }
-   50% { transform: scale(1.1); }
-   100% { transform: scale(1); }
-}
-
-.headline h4:hover {
-	animation-name: pulse;
-	animation-duration: 4s;
-	cursor: pointer;
+.hero {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	border-bottom: 1px solid black;
+	width: 95%;
+	margin: 0 auto;
+	padding-bottom: 2em;
 }
 
 .header-img {
-	padding-left: 5px;
+	display: none;
 }
 
-.top {
-	border-top: 1px solid black;
-	padding-top: 3em;
-	margin-top: 5em;
-	display: flex;
-	flex-flow: row wrap;
+main {
+	width: 95%;
+	margin: 0 auto;
 }
 
-.top div {
-	width: 49%;
-	margin-bottom: 2em;
+section div {
+	margin: 2em 0;
 }
 
-.middle {
-	width: 100%;
-	margin-bottom: 3em;
-}
-
-.middle img {
+.middle-img {
 	max-width: 100%;
 }
 
-.lower {
+section:last-child div:last-child {
 	border-bottom: 1px solid black;
-	margin-bottom: 3em;
-	padding-bottom: 3em;
-	display: flex;
-	flex-flow: row wrap;
+	padding-bottom: 2em;
 }
 
-.lower div {
-	width: 33%;
-	padding-right: 0.5em;
-	margin-top: 0.5em;
+footer {
+	width: 95%;
+	margin: 0 auto;
 }
 
 .address {	
@@ -214,131 +207,82 @@ nav a.active {
 
 footer p {
 	text-align: center;
+	padding-top: 1.5em;
 }
 
-
-.facts-text {
-	width: 48%;
-}
-
-.facts-text h2 {
-	padding-bottom: 0.5em;
-}
-
-.facts-text p {
-	padding-bottom: 1em;
-	line-height: 1.25em;
-}
-
-.facts-text ul {
-	list-style-type: square;
-	list-style-position: inside;
-	line-height: 2em;
-
-}
-
-.facts-img {
-	width: 48%;
-}
-
-.services-info-img {
-	max-width: 100%;
-}
-
-/* Tablet Styles */
-@media screen and (max-width: 800px) {
-	body {
-		width: 97%;
-	}
-	.page-top {
-		flex-flow: column-reverse nowrap;
-		align-items: center;
-	}
-
-	.logo-div {
-		margin: 2em 0;
-	}
-
+@media only screen and (min-width: 800px) {
+	/* Tablet styles */
+	
 	nav {
-		flex-wrap: nowrap;
-		width: 100%;
-		justify-content: space-between;
-	}
-
-	nav a {
-		padding: 0;
-	}
-
-	.hero {
-		justify-content: center;
-	}
-
-	.header-img {
-		display: none;
-	}
-}
-
-/* Mobile Phone Styles */
-@media screen and (max-width: 500px) {
-	body {
-		width: 100%;
-	}
-
-	.logo-div {
-		margin: 1em 0;
-	}
-
-	nav {
-		flex-direction: column;
+		flex-flow: row nowrap;
 	}
 	nav a {
-		width: 100%;
-		text-align: center;
-		border-top: 1px solid black;
-		padding: 1em 0;
+		border: none;
 	}
 
 	nav a:last-child {
-		border-bottom: 1px solid black;
+		border-bottom: none;
 	}
 
-	nav a:hover {
-		animation-name: pulse;
-	}
-
-	.headline h1 {
-		font-size: 4em;
-	}
-
-	.headline h4 {
-		padding: 0.5em 1em;
-	}
-
-	main {
-		width: 95%;
-		margin: 0 auto;
-	}
-
-	.top, .lower {
-		flex-direction: column;
-	}
-
-	.top div, .lower div {
-		width: 100%;
-		margin-bottom: 2em;
+	.top {
+		display: flex;
+		flex-flow: row nowrap;
 	}
 
 	.lower {
-		padding-bottom: 0;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		border-bottom: 1px solid black;
+	}
+
+	.lower div {
+		width: 32%;
+	}
+
+	section:last-child div:last-child {
+		border-bottom: none;
 	}
 
 	footer {
-		width: 95%;
-		margin: 0 auto;
+		padding-top: 2rem;
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+	/* Desktop styles */
+	body {
+		width: 90%;
+		margin: 0 auto; 
 	}
 
-	footer p {
-		margin-top: 1.5em;
+	.page-top {
+		flex-flow: row nowrap;
+	}
+
+	.header-img {
+		display: inline-block;
+	}
+
+	.headline {
+		padding: 2rem 0 2rem 6rem;
+		font-size: 1.25rem;
+	}
+	.hero {
+		display:flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.middle {
+		background: black;
+		background-image: url("../img/mid-page-accent.jpg");
+		background-size: cover;
+	}
+
+	.middle img {
+		visibility: hidden;
 	}
 
 }
